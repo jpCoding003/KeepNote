@@ -41,7 +41,9 @@ class NewNoteFragment : Fragment() {
                 val intent= Intent(requireContext(), MainActivity::class.java)
                 intent.putExtra("newNote",binding.newNoteName.text.toString())
                 startActivity(intent)
+                activity?.finish()
             }
+
         }
         activity?.title = "New Note"
 
