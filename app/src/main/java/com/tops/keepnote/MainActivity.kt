@@ -14,9 +14,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tops.keepnote.Fragment.NewNoteFragment
-import com.tops.keepnote.adapter.MyAdapter
 import com.tops.keepnote.databinding.ActivityMainBinding
 
 private const val TAG = "MainActivity"
@@ -44,12 +45,6 @@ class MainActivity : AppCompatActivity() {
         binding.rvNotes.layoutManager = LinearLayoutManager(this)
         binding.rvNotes.adapter = adapter
 
-//        val noteAdd = intent.getStringExtra("newNote")
-//        Log.i(TAG, "Data == $noteAdd")
-//        noteAdd?.let {
-//            noteList.add(it)
-//            adapter.notifyItemInserted(noteList.size-1)
-//        }
 
         if (intent.hasExtra("newNote")) {
             val newNote = intent.getStringExtra("newNote")
@@ -71,8 +66,13 @@ class MainActivity : AppCompatActivity() {
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 if (menuItem.itemId == R.id.addNote){
-                    val intent= Intent(applicationContext, DashBoard::class.java)
-                    startActivity(intent)
+//                    val intent= Intent(applicationContext, DashBoard::class.java)
+//                    startActivity(intent)
+                    supportFragmentManager.commit {
+                        setReorderingAllowed(true)
+                        add<NewNoteFragment>(R.id.containerview)
+                        setTitle("New Notes")
+                    }
                     return true
                 }
                 return false

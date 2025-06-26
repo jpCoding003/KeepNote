@@ -11,14 +11,17 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#D66767"
         app:cardCornerRadius="15dp"
-        android:elevation="15dp"
-        android:padding="25dp">
+        android:elevation="15dp">
 
         <TextView
             android:id="@+id/noteName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hello"
+            android:textStyle="bold"
+            android:letterSpacing=".1"
+            android:fontFamily="monospace"
+            android:padding="25dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:paddingStart="22dp"/>
 
