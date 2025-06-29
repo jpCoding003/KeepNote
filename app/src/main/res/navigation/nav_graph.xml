@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listNoteFragment_to_addNoteFragment"
             app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_listNoteFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
@@ -21,6 +24,15 @@
         tools:layout="@layout/fragment_add_note" >
         <action
             android:id="@+id/action_addNoteFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.tops.keepnote.Fragment.EditNoteFragment"
+        android:label="EditNoteFragment"
+        tools:layout="@layout/fragment_edit_note">
+        <action
+            android:id="@+id/action_editNoteFragment_to_listNoteFragment"
             app:destination="@id/listNoteFragment" />
     </fragment>
 </navigation>
