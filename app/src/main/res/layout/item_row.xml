@@ -25,7 +25,6 @@
                 android:layout_height="match_parent"
                 android:text="Hello"
                 android:textColor="@color/black"
-                android:fontFamily="serif-monospace"
                 android:textSize="35dp"/>
 
             <TextView
@@ -33,6 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Hello"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:textColor="#4E4E4E"
                 android:textSize="20dp"
                 android:layout_marginTop="12dp"/>
