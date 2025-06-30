@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.tops.keepnote.R
 import com.tops.keepnote.databinding.FragmentAddNoteBinding
@@ -30,6 +31,9 @@ class AddNoteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val navOptions = NavOptions.Builder()
+            .setPopUpTo(R.id.mobile_navigation, true) // 👈 Clears all fragments up to root
+            .build()
 
         binding.btnDone.setOnClickListener {
             if (binding.etNotes.text!!.isEmpty()){
@@ -40,8 +44,9 @@ class AddNoteFragment : Fragment() {
                 contentValues.put("title", binding.etNotes.text.toString())
                 contentValues.put("description", binding.etDescription.text.toString())
                 db.insert("notes", null, contentValues)
-                findNavController().navigate(R.id.action_addNoteFragment_to_listNoteFragment)
+                findNavController().navigate(R.id.action_addNoteFragment_to_listNoteFragment,null,navOptions)
             }
+
         }
 
     }

@@ -58,10 +58,10 @@ class ListNoteFragment : Fragment(), MyAdapter.NoteClickListener{
         adapter = MyAdapter(notes, this)
         binding.rvNoteListView.adapter = adapter
 
+
         binding.btnAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_listNoteFragment_to_addNoteFragment)
         }
-
     }
 
     override fun onNoteDelete(notesData: NotesData, position: Int) {

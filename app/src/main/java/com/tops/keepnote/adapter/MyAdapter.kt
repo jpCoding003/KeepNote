@@ -11,7 +11,6 @@ private const val TAG = "MyAdapter"
 class MyAdapter(private val notesData: MutableList<NotesData>,private  val listener: NoteClickListener): RecyclerView.Adapter<MyAdapter.NotesViewHolder>() {
 
 
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

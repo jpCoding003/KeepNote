@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.tops.keepnote.NotesData
 import com.tops.keepnote.R
@@ -27,6 +28,9 @@ class EditNoteFragment : Fragment() {
     ): View? {
         binding = FragmentEditNoteBinding.inflate(layoutInflater)
 
+        val navOptions = NavOptions.Builder()
+            .setPopUpTo(R.id.mobile_navigation, true) // 👈 Clears all fragments up to root
+            .build()
 
         db = requireActivity().openOrCreateDatabase("notepad", Context.MODE_PRIVATE, null)
 
@@ -47,7 +51,7 @@ class EditNoteFragment : Fragment() {
                 )
 
                 Toast.makeText(requireContext(), "Note Updated", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_editNoteFragment_to_listNoteFragment)
+                findNavController().navigate(R.id.action_editNoteFragment_to_listNoteFragment,null,navOptions)
             } else {
                 Toast.makeText(requireContext(), "Fields can't be empty", Toast.LENGTH_SHORT).show()
             }

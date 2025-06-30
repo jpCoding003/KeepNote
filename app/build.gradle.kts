@@ -41,6 +41,7 @@ android {
 dependencies {
 
 
+
     implementation("androidx.fragment:fragment-ktx:1.8.7")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
