@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.ListNoteFragment"
+
     android:padding="15dp">
+
 
     <TextView
         android:id="@+id/textView"
@@ -17,6 +19,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="All Notes"
         android:textSize="25sp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNoteListView"
@@ -33,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="#8C01CB"
         android:layout_gravity="end"
         android:layout_marginEnd="66dp"
         android:layout_marginBottom="169dp"

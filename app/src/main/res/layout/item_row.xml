@@ -9,7 +9,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#DAC9F3"
+        android:backgroundTint="#EFB6CE"
         android:elevation="10dp"
         app:cardCornerRadius="12dp">
 
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:backgroundTint="#DAC9F3"
+                android:backgroundTint="#5205C7"
                 android:src="@android:drawable/ic_menu_edit" />
 
             <ImageButton
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:backgroundTint="#DAC9F3"
+                android:backgroundTint="#558B2F"
                 android:src="@android:drawable/ic_menu_delete" />
 
 

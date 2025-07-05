@@ -7,7 +7,7 @@
     android:padding="15dp"
     tools:context=".Fragment.AddNoteFragment"
     android:orientation="vertical"
-    android:background="@color/lightBrown">
+    android:background="#BC8CDD">
 
 
     <RelativeLayout
@@ -23,7 +23,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="54dp"
             android:layout_marginTop="0dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="#A8E669"
             android:src="@drawable/outline_check_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="42dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="#EB4643"
             android:src="@drawable/baseline_clear_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
